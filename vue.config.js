@@ -2,7 +2,7 @@ const path = require('path')
 const name = 'Vue Typescript Admin'
 
 module.exports = {
-  //配置到自己github reporsity地址
+  //配置到自己github reporsity地址 /fc-info
   publicPath: process.env.NODE_ENV === 'production' ? './' : '/', // TODO: Remember to change this to fit your need
   lintOnSave: process.env.NODE_ENV === 'development',
   pwa: {

@@ -10,7 +10,7 @@
     >
       <div class="title-container">
         <h3 class="title">
-          Login Form
+          登录
         </h3>
       </div>
 
@@ -56,13 +56,13 @@
         style="width:100%; margin-bottom:30px;"
         @click.native.prevent="handleLogin"
       >
-        Sign in
+        立即登录
       </el-button>
 
       <div style="position:relative">
         <div class="tips">
-          <span> username: admin </span>
-          <span> password: any </span>
+          <span> 用户名: 笑笑 </span>
+          <span> 密码: 随便填 </span>
         </div>
       </div>
     </el-form>
@@ -83,20 +83,20 @@ import { isValidUsername } from '@/utils/validate'
 export default class extends Vue {
   private validateUsername = (rule: any, value: string, callback: Function) => {
     if (!isValidUsername(value)) {
-      callback(new Error('Please enter the correct user name'))
+      callback(new Error('请输入正确的用户名'))
     } else {
       callback()
     }
   }
   private validatePassword = (rule: any, value: string, callback: Function) => {
     if (value.length < 6) {
-      callback(new Error('The password can not be less than 6 digits'))
+      callback(new Error('密码不能少于六个字符'))
     } else {
       callback()
     }
   }
   private loginForm = {
-    username: 'admin',
+    username: '笑笑',
     password: '111111'
   }
   private loginRules = {
@@ -215,7 +215,8 @@ export default class extends Vue {
   height: 100%;
   width: 100%;
   overflow: hidden;
-  background-color: $loginBg;
+  background: url(../../assets/bg.jpg) no-repeat;
+  background-size: cover;
 
   .login-form {
     position: relative;
