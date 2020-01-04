@@ -7,6 +7,13 @@ module.exports = {
   pwa: {
     name: name
   },
+  build: {
+    index: path.resolve(__dirname, 'dist/index.html'),
+    assetsRoot: path.resolve(__dirname, 'dist'),
+    assetsSubDirectory: 'static',
+    assetsPublicPath: './',
+    productionSourceMap: true
+  },
   pluginOptions: {
     'style-resources-loader': {
       preProcessor: 'scss',
